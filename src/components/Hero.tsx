@@ -100,7 +100,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold button-bounce"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get In Touch
@@ -108,7 +108,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40 button-glow"
+              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40"
               asChild
             >
               <a href="https://github.com/JRanjan-Biswal" target="_blank" rel="noopener noreferrer">
@@ -119,7 +119,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40 button-glow"
+              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40"
               asChild
             >
               <a href="https://linkedin.com/in/jyoti-ranjan-biswal/" target="_blank" rel="noopener noreferrer">

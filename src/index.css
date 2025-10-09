@@ -79,30 +79,6 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-glow);
   }
 
-  .glow-effect:hover {
-    box-shadow: var(--shadow-glow), 0 0 60px hsl(18 100% 60% / 0.3);
-  }
-
-  .button-bounce {
-    @apply transition-all duration-300 ease-out;
-  }
-
-  .button-bounce:hover {
-    @apply transform scale-105 shadow-xl;
-  }
-
-  .button-bounce:active {
-    @apply transform scale-95;
-  }
-
-  .button-glow {
-    @apply transition-all duration-300 ease-out;
-  }
-
-  .button-glow:hover {
-    @apply shadow-lg shadow-primary/25;
-  }
-
   .section-padding {
     @apply py-20 px-6 lg:px-12;
   }

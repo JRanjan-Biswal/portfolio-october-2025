@@ -43,7 +43,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             <button
               onClick={() => scrollToSection("#")}
-              className="text-xl md:text-2xl font-bold hover:text-primary transition-all duration-300 hover:scale-105"
+              className="text-xl md:text-2xl font-bold hover:text-primary transition-colors"
             >
               JRB<span className="text-primary">.</span>
             </button>
@@ -54,7 +54,7 @@ const Navigation = () => {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-muted-foreground hover:text-primary transition-all duration-300 font-medium hover:scale-105 hover:shadow-sm"
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
                 >
                   {link.name}
                 </button>
@@ -65,7 +65,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden button-glow"
+              className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}

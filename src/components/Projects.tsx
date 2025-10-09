@@ -68,7 +68,7 @@ const Projects = () => {
               <div className="flex gap-3">
                 <Button
                   variant="default"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1 button-bounce"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1"
                   asChild
                 >
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
@@ -79,7 +79,7 @@ const Projects = () => {
                 {project.github && (
                   <Button
                     variant="outline"
-                    className="border-primary/20 hover:bg-primary/10 hover:border-primary/40 button-glow"
+                    className="border-primary/20 hover:bg-primary/10 hover:border-primary/40"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">

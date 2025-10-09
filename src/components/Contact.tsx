@@ -58,9 +58,9 @@ const Contact = () => {
                 href="https://github.com/JRanjan-Biswal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all duration-300 group hover:scale-105"
+                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
               >
-                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                   <Github className="w-5 h-5 text-primary" />
                 </div>
                 <span>GitHub Profile</span>
@@ -69,9 +69,9 @@ const Contact = () => {
                 href="https://linkedin.com/in/jyoti-ranjan-biswal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-all duration-300 group hover:scale-105"
+                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
               >
-                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                   <Linkedin className="w-5 h-5 text-primary" />
                 </div>
                 <span>LinkedIn Profile</span>
@@ -82,7 +82,7 @@ const Contact = () => {
           <div className="pt-8 border-t border-border text-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold button-bounce"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold"
               asChild
             >
               <a href="mailto:jranjan2018@gmail.com">
