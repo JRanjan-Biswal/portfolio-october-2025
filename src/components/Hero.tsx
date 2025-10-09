@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative section-padding">
-      {/* Animated background gradient */}
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" /> */}
-
+    <section className="min-h-screen flex items-center justify-center relative section-padding md:overflow-auto overflow-hidden">
       {/* Glow orbs */}
       <motion.div
         className="absolute top-1/4 right-1/3 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"
@@ -100,7 +97,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold md:w-auto w-full"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get In Touch

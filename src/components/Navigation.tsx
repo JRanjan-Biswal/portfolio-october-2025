@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -65,33 +65,99 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden relative w-10 h-10 flex items-center justify-center group"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X /> : <Menu />}
+              <div className={`hamburger-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+                <span className="w-full group-hover:bg-primary" />
+                <span className="w-2/3 ml-auto group-hover:w-full group-hover:bg-primary" />
+                <span className="w-full group-hover:bg-primary" />
+              </div>
             </Button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          <div className="fixed inset-0 bg-background/95 backdrop-blur-lg pt-20">
-            <div className="flex flex-col items-center gap-6 p-6">
-              {navLinks.map((link) => (
+      <div 
+        className={`fixed inset-0 z-40 md:hidden ${
+          isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
+        }`}
+      >
+        {/* Backdrop */}
+        <div 
+          className={`absolute inset-0 bg-background/80 backdrop-blur-sm transition-opacity duration-300 ${
+            isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+          }`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        
+        {/* Menu Panel */}
+        <div 
+          className={`absolute top-0 right-0 h-full w-[75vw] bg-background/95 backdrop-blur-lg border-l border-border transform transition-transform duration-500 ease-out ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="flex flex-col h-full">
+            {/* Navigation Links */}
+            <div className="flex flex-col items-start gap-7 p-8 pt-24">
+              {navLinks.map((link, index) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-xl text-muted-foreground hover:text-primary transition-colors font-medium"
+                  className={`text-xl text-muted-foreground hover:text-primary transition-all transform hover:scale-105 font-medium
+                    w-full text-left opacity-0 ${isMobileMenuOpen ? 'animate-fadeSlideInRight' : ''}`}
+                  style={{
+                    animationDelay: `${0.2 + index * 0.1}s`,
+                    animationFillMode: 'forwards'
+                  }}
                 >
                   {link.name}
                 </button>
               ))}
             </div>
+
+            {/* Social Links */}
+            <div className={`mt-auto p-8 border-t border-border opacity-0 ${
+              isMobileMenuOpen ? 'animate-fadeSlideInRight' : ''
+            }`}
+              style={{
+                animationDelay: '0.7s',
+                animationFillMode: 'forwards'
+              }}
+            >
+              <div className="flex flex-col gap-4">
+                <Button 
+                  variant="default" 
+                  className="w-full gap-2 text-base font-medium"
+                  onClick={() => scrollToSection("#contact")}
+                >
+                  <Send size={18} />
+                  Get in Touch
+                </Button>
+                <div className="flex gap-3">
+                  <Button
+                    variant="outline"
+                    className="flex-1 gap-2"
+                    onClick={() => window.open('https://github.com/jyotiranjan97', '_blank')}
+                  >
+                    <Github size={18} />
+                    GitHub
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 gap-2"
+                    onClick={() => window.open('https://linkedin.com/in/jyotiranjan97', '_blank')}
+                  >
+                    <Linkedin size={18} />
+                    LinkedIn
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };

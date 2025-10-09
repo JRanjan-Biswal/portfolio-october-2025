@@ -101,7 +101,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <p>© 2025 Jyoti Ranjan Biswal. Built with React, TypeScript & Tailwind CSS</p>
+          <p>© 2025 Jyoti Ranjan Biswal.</p>
         </motion.div>
       </div>
     </section>
