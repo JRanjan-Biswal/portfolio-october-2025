@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 18 100% 60%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 18 100% 60%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 18 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(18 100% 60%), hsl(25 100% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --shadow-glow: 0 0 40px hsl(18 100% 60% / 0.2);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-[hsl(25,100%,65%)] bg-clip-text text-transparent;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-effect:hover {
+    box-shadow: var(--shadow-glow), 0 0 60px hsl(18 100% 60% / 0.3);
+  }
+
+  .button-bounce {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .button-bounce:hover {
+    @apply transform scale-105 shadow-xl;
+  }
+
+  .button-bounce:active {
+    @apply transform scale-95;
+  }
+
+  .button-glow {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .button-glow:hover {
+    @apply shadow-lg shadow-primary/25;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 lg:px-12;
+  }
+}
