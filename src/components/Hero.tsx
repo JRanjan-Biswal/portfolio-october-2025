@@ -74,7 +74,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Frontend Lead
+              Frontend Engineer
             </motion.h2>
           </motion.div>
 
@@ -105,7 +105,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40"
+              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40 z-10 hover:text-white"
               asChild
             >
               <a href="https://github.com/JRanjan-Biswal" target="_blank" rel="noopener noreferrer">
@@ -116,7 +116,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40"
+              className="border-primary/20 hover:bg-primary/10 hover:border-primary/40 z-10 hover:text-white"
               asChild
             >
               <a href="https://linkedin.com/in/jyoti-ranjan-biswal/" target="_blank" rel="noopener noreferrer">
