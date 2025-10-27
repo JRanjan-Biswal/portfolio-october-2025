@@ -5,6 +5,20 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "EComCart website",
+    description: "A responsive e-commerce website for car sales built with React and Tailwind CSS. It features a clean design, smooth navigation, and a user-friendly interface for browsing and purchasing cars online.",
+    tags: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+    link: "https://ecom-cart-fe.onrender.com/",
+    github: "https://github.com/JRanjan-Biswal/ecom-cart-fe",
+  },
+  {
+    title: "Tic Tac Toe Game Live Play",
+    description: "A responsive tic tac toe game built with React and Tailwind CSS. It features a clean design, with real time game play and chat functionality.",
+    tags: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS", "Socket.io", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT"],
+    link: "https://tic-tac-toe-game-fe.onrender.com/",
+    github: "https://github.com/JRanjan-Biswal/tic-tac-toe-game-fe",
+  },
+  {
     title: "Next.js Template Generator",
     description: "Developed a Next.js template generator that reduces project setup time by 50% by automating configuration and dependency management, minimizing common setup errors and streamlining the development workflow.",
     tags: ["Next.js", "CLI Tool", "NPM Package", "TypeScript"],
@@ -17,6 +31,13 @@ const projects = [
     tags: ["Next.js", "Firebase", "FCM", "React", "Real-time"],
     link: "https://xcamper.com/",
   },
+  {
+    title: "Strapi Deep Populate",
+    description: "A strapi plugin that allows you to deeply populate your data. It features a clean design, smooth navigation, and a user-friendly interface for browsing and purchasing cars online.",
+    tags: ["Strapi", "Plugin", "JavaScript", "TypeScript"],
+    link: "https://github.com/JRanjan-Biswal/strapi-deepopulate",
+    github: "https://github.com/JRanjan-Biswal/strapi-deepopulate",
+  }
 ];
 
 const Projects = () => {
