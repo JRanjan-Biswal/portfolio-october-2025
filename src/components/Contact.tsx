@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import ContactModal from "./ContactModal";
 
 const Contact = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="contact" className="section-padding">
       <div className="max-w-4xl mx-auto">
@@ -83,14 +86,14 @@ const Contact = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect font-semibold"
-              asChild
+              onClick={() => setIsModalOpen(true)}
             >
-              <a href="mailto:jranjan2018@gmail.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Send Me an Email
-              </a>
+              <Mail className="mr-2 h-5 w-5" />
+              Send Me an Email
             </Button>
           </div>
+          
+          <ContactModal open={isModalOpen} onOpenChange={setIsModalOpen} />
         </Card>
         </motion.div>
 
